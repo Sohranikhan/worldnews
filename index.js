@@ -1,4 +1,6 @@
 const express = require("express")
+const PORT = process.env.PORT|| 3000
+
 const axios = require("axios")
 const cheerio = require("cheerio")
 const cors = require("cors")
@@ -94,6 +96,6 @@ app.get("/",(req,res)=>{
     res.json(ind)
  })
  
-  app.listen(3000,()=>{
+  app.listen(PORT,()=>{
     console.log("hello there")
   })
